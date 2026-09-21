@@ -2,7 +2,6 @@
 package service
 
 import (
-	"log/slog"
 	"testing"
 
 	"connectrpc.com/connect/v2"
@@ -19,17 +18,9 @@ type dataStub struct {
 	dataconnect.UnimplementedServiceHandler
 }
 
-func TestNew(t *testing.T) {
-	t.Run("supplies a logger when given none", func(t *testing.T) {
-		if New(nil, &dataStub{}).log == nil {
-			t.Error("expected a logger")
-		}
-	})
-}
-
 func TestDelete(t *testing.T) {
 	t.Run("is not served", func(t *testing.T) {
-		server := New(slog.New(slog.DiscardHandler), &dataStub{})
+		server := New(&dataStub{})
 
 		request := identity.DeleteRequest_builder{
 			Principal: identitytypes.Principal_builder{Id: principalID}.Build(),
