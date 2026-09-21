@@ -105,7 +105,7 @@ func Run() int {
 
 	dataClient := dataconnect.NewServiceClient(connectclient.New(httpClient, discover.BaseURL, nil))
 
-	server := service.New(log, dataClient)
+	server := service.New(dataClient)
 
 	methodList, err := service_lib.Register(
 		host.Server,

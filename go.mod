@@ -6,7 +6,6 @@ require (
 	buf.build/gen/go/authaas/identity-service/protocolbuffers/go v1.36.12-20260920223930-1cbea0706b22.2
 	buf.build/gen/go/authaas/identity/protocolbuffers/go v1.36.12-20260920174019-cb9ef3c3aa4c.2
 	connectrpc.com/connect/v2 v2.0.0-alpha.1
-	git.sonicoriginal.software/logger v0.1.0
 	github.com/authaas/identity-data-bindings-connect-go v0.1.1
 	github.com/authaas/identity-service-bindings-connect-go v0.1.0
 	github.com/caarlos0/env/v11 v11.4.1
@@ -23,6 +22,7 @@ require (
 require (
 	buf.build/gen/go/authaas/identity-data/protocolbuffers/go v1.36.12-20260921012509-dc06d089118f.2 // indirect
 	buf.build/gen/go/authaas/token/protocolbuffers/go v1.36.12-20260920174249-1b86e4d5c13a.2 // indirect
+	git.sonicoriginal.software/logger v0.1.0 // indirect
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	github.com/cenkalti/backoff/v7 v7.0.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
