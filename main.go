@@ -1,5 +1,4 @@
-// The identity service: identity.Service served with connect-go over the
-// identity data service.
+//revive:disable:package-comments
 package main
 
 import (
