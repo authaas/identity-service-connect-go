@@ -10,6 +10,7 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+	"uuid"
 
 	"connectrpc.com/connect/v2"
 	"github.com/caarlos0/env/v11"
@@ -50,7 +51,7 @@ func Run() int {
 
 	stack := lifecycle.Stack{}
 
-	log, flush, err := pbrpcotel.Init(ctx, svcCfg.Name, svcCfg.Version)
+	log, flush, err := pbrpcotel.Init(ctx, svcCfg.Name, svcCfg.Version, uuid.New().String())
 	if err != nil {
 		slog.Default().Error("Failed to initialize telemetry", slog.Any("error", err))
 		return 1
